@@ -17,6 +17,7 @@ namespace WpfApp1
         public string Log { get; set; }
         [Required]
         public string Pass { get; set; }
+        da
 
     }
 }
