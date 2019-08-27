@@ -21,8 +21,13 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         public MainWindow()
-        {
+        {          
             InitializeComponent();
+            Button_Left.Content = "<-";
+            Button_Right.Content = "->";
+
+
+
         }
     }
 }

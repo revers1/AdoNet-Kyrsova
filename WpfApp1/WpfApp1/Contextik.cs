@@ -13,5 +13,9 @@ namespace WpfApp1
         {
                 
         }
+        public DbSet<Answers> DbAnswers { get; set; }
+        public DbSet<Questions> DbQuestions { get; set; }
+        public DbSet<MemberSchool> DbMemberSchool { get; set; }
+
     }
 }

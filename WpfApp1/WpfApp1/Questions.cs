@@ -8,16 +8,24 @@ using System.Threading.Tasks;
 
 namespace WpfApp1
 {
-    [Table("tblLoginPanel")]
-   public class MemberSchool
+
+    [Table("tblCreateExam")]
+    public class Questions
     {
         [Key]
         public int Id { get; set; }
         [Required]
-        public string Log { get; set; }
+        public string Quastion { get; set; }
         [Required]
-        public string Pass { get; set; }
-        
+        public int Price_Q { get; set; }
+
+        public virtual ICollection<Answers> Answerss { get; set; }
+       
+
+
+
+
 
     }
+    
 }

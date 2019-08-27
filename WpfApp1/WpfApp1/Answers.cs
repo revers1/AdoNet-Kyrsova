@@ -8,16 +8,19 @@ using System.Threading.Tasks;
 
 namespace WpfApp1
 {
-    [Table("tblLoginPanel")]
-   public class MemberSchool
+    [Table("tblAnswers")]
+    public class Answers
     {
         [Key]
         public int Id { get; set; }
         [Required]
-        public string Log { get; set; }
+        public string Answer{ get; set; }
         [Required]
-        public string Pass { get; set; }
-        
+        public bool IsCorrect { get; set; }
+
+        [Required][ForeignKey("Questionss")]
+        public  int Id_Question { get; set; }
+        public virtual Questions Questionss { get; set; }
 
     }
 }
