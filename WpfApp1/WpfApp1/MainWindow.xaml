@@ -10,13 +10,63 @@
         <TextBox Name="textboxQuestion" Background="LightGray" Margin="105,10,105,405" BorderBrush="MediumPurple" BorderThickness="2.5" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic">Введіть питання</TextBox>
         <TextBox Name="textboxAnswer1" Background="LightGray" Margin="105,83,105,325" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
         <TextBox Name="textboxAnswer2" Background="LightGray" Margin="105,162,105,246" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
-        <TextBox Name="textboxAnswer3" Background="LightGray" Margin="105,242,105,166" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
-        <TextBox Name="textboxAnswer4" Background="LightGray" Margin="105,323,105,85" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
-        <TextBox Name="textboxAnswer5" Background="LightGray" Margin="105,398,105,10" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
-        <Button Name="Button_Right" BorderBrush="Purple" BorderThickness="3" Margin="700,420,10,10"  FontSize="24" FontWeight="Bold"></Button>
-        <Button Name="Button_Left" BorderBrush="Purple" BorderThickness="3" Margin="10,420,700,10"  FontSize="24" FontWeight="Bold"></Button>
-        <Button Name="Button_Add" BorderBrush="Green" BorderThickness="3" Content="Добавить" Margin="700,25,10,405" FontWeight="Bold"/>
-        <Button Name="Button_Clear" BorderBrush="Red" BorderThickness="3" Content="Очистити" Margin="10,25,700,405" FontWeight="Bold"/>
-
+        <TextBox Visibility="Hidden" Name="textboxAnswer3" Background="LightGray" Margin="105,242,105,166" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
+        <TextBox Visibility="Hidden" Name="textboxAnswer4" Background="LightGray" Margin="105,323,105,85" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
+        <TextBox Visibility="Hidden" Name="textboxAnswer5" Background="LightGray" Margin="105,398,105,10" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
+        <Button Name="Button_Right" BorderBrush="Purple" BorderThickness="3" Margin="732,398,10,32"  FontSize="24" FontWeight="Bold" Click="Button_Right_Click"></Button>
+        <Button Name="Button_Left" BorderBrush="Purple" BorderThickness="3" Margin="10,398,736,32"  FontSize="24" FontWeight="Bold" Click="Button_Left_Click"></Button>
+        <Button Name="Button_Add" BorderBrush="Green" BorderThickness="3" Content="Добавить" Margin="700,25,10,405" FontWeight="Bold" Click="Button_Add_Click"/>
+        <Button Name="Button_Clear" BorderBrush="Red" BorderThickness="3" Content="Очистити" Margin="10,25,700,405" FontWeight="Bold" Click="Button_Clear_Click"/>
+        <CheckBox Name="Checkbox1" HorizontalAlignment="Left" Margin="72,109,0,0" VerticalAlignment="Top" Height="17" Width="15" RenderTransformOrigin="0.5,0.5">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <CheckBox Name="Checkbox2" HorizontalAlignment="Left" Margin="72,186,0,0" VerticalAlignment="Top" Height="17" Width="15" RenderTransformOrigin="0.5,0.5">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <CheckBox Visibility="Hidden" Name="Checkbox3" HorizontalAlignment="Left" Margin="72,266,0,0" VerticalAlignment="Top" Height="17" Width="15" RenderTransformOrigin="0.5,0.5">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <CheckBox Visibility="Hidden" Name="Checkbox4" HorizontalAlignment="Left" Margin="72,345,0,0" VerticalAlignment="Top" Height="17" Width="15" RenderTransformOrigin="0.5,0.5">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <CheckBox Visibility="Hidden" Name="Checkbox5" HorizontalAlignment="Left" Margin="72,419,0,0" VerticalAlignment="Top" Height="17" Width="15" RenderTransformOrigin="0.5,0.5">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <Button Name="ButtonSave" Background="Green" BorderThickness="2" BorderBrush="Purple" Foreground="DarkBlue" FontSize="16" Margin="700,83,10,355" FontWeight="Bold" Click="ButtonSave_Click">Зберегти</Button>
     </Grid>
 </Window>
