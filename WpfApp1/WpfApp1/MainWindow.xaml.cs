@@ -148,6 +148,7 @@ namespace WpfApp1
                 answerss.Id_Question = questionss.Id;
                 answerss2.Answer= textboxAnswer2.Text;
                 answerss2.Id_Question = questionss.Id;
+                //answerss2.Id_Question = questionss.Id;
 
                 if (Checkbox1.IsChecked == true)
                 {
