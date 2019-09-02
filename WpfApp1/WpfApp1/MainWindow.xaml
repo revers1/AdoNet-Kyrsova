@@ -5,19 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
+        Title="MainWindow" Height="500" Width="800"
+      >
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\romaprozhoga\Desktop\background.png"  Stretch="UniformToFill" Opacity="0.7"></ImageBrush>
+        </Grid.Background>
         <TextBox Name="textboxQuestion" Background="LightGray" Margin="105,10,105,405" BorderBrush="MediumPurple" BorderThickness="2.5" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic">Введіть питання</TextBox>
-        <TextBox Name="textboxAnswer1" Background="LightGray" Margin="105,83,105,325" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
-        <TextBox Name="textboxAnswer2" Background="LightGray" Margin="105,162,105,246" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
-        <TextBox Visibility="Hidden" Name="textboxAnswer3" Background="LightGray" Margin="105,242,105,166" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
+        <!--<TextBox Text="{Binding Path=Answer}" Name="textboxAnswer1" Background="LightGray" Margin="105,83,105,325" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
+        <TextBox Text="{Binding Path=Answer}" Name="textboxAnswer2" Background="LightGray" Margin="105,162,105,246" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
+        <TextBox Text="{Binding Path=Answer}" Visibility="Hidden" Name="textboxAnswer3" Background="LightGray" Margin="105,242,105,166" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
         <TextBox Visibility="Hidden" Name="textboxAnswer4" Background="LightGray" Margin="105,323,105,85" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
-        <TextBox Visibility="Hidden" Name="textboxAnswer5" Background="LightGray" Margin="105,398,105,10" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
+        <TextBox Visibility="Hidden" Name="textboxAnswer5" Background="LightGray" Margin="105,398,105,10" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>-->
         <Button Name="Button_Right" BorderBrush="Purple" BorderThickness="3" Margin="732,398,10,32"  FontSize="24" FontWeight="Bold" Click="Button_Right_Click"></Button>
         <Button Name="Button_Left" BorderBrush="Purple" BorderThickness="3" Margin="10,398,736,32"  FontSize="24" FontWeight="Bold" Click="Button_Left_Click"></Button>
-        <Button Name="Button_Add" BorderBrush="Green" BorderThickness="3" Content="Добавить" Margin="700,25,10,405" FontWeight="Bold" Click="Button_Add_Click"/>
+        <Button Name="Button_Add" BorderBrush="Green" BorderThickness="3" Content="Добавить" Margin="700,45,10,385" FontWeight="Bold" Click="Button_Add_Click"/>
         <Button Name="Button_Clear" BorderBrush="Red" BorderThickness="3" Content="Очистити" Margin="10,25,700,405" FontWeight="Bold" Click="Button_Clear_Click"/>
-        <CheckBox Name="Checkbox1" HorizontalAlignment="Left" Margin="72,109,0,0" VerticalAlignment="Top" Height="17" Width="15" RenderTransformOrigin="0.5,0.5">
+        <!--<CheckBox Name="Checkbox1" HorizontalAlignment="Left" Margin="72,109,0,0" VerticalAlignment="Top" Height="17" Width="15" RenderTransformOrigin="0.5,0.5">
             <CheckBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleX="2" ScaleY="2"/>
@@ -66,7 +70,35 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </CheckBox.RenderTransform>
-        </CheckBox>
-        <Button Name="ButtonSave" Background="Green" BorderThickness="2" BorderBrush="Purple" Foreground="DarkBlue" FontSize="16" Margin="700,83,10,355" FontWeight="Bold" Click="ButtonSave_Click">Зберегти</Button>
+        </CheckBox>-->
+        <Button Name="ButtonSave" Background="Green" BorderThickness="2" BorderBrush="Purple" Foreground="DarkBlue" FontSize="16" Margin="700,103,10,335" FontWeight="Bold" Click="ButtonSave_Click">Зберегти</Button>
+        <Button FontSize="16" Background="Pink" BorderBrush="Black" Margin="758,1,0,434" FontWeight="Bold" FontStyle="Normal">X</Button>
+        <ListView ItemsSource="{Binding Path=listAnswers}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Name="lvAnswers" Background="Transparent" HorizontalAlignment="Left" Height="349" Margin="105,89,0,0" VerticalAlignment="Top" Width="582">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel  Orientation="Vertical"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0 0 0 10" Width="{Binding ActualWidth,ElementName=lvAnswers}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <CheckBox Grid.Column="0" Margin="20" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="15" RenderTransformOrigin="0.5,0.5">
+                            <CheckBox.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                                </TransformGroup>
+                            </CheckBox.RenderTransform>
+                        </CheckBox>
+                        <TextBox Grid.Column="1"  Height="50" Text="{Binding Path=Answer}"  Background="LightGray" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
     </Grid>
 </Window>
