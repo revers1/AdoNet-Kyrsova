@@ -1,0 +1,81 @@
+﻿<Window x:Class="WpfApp1.WindowStudent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="WindowStudent" Height="500" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="photo.png"  Stretch="UniformToFill" Opacity="0.7"></ImageBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="12*"/>
+        </Grid.RowDefinitions>
+        <TextBox Name="textboxQ1" IsReadOnly="True" Background="LightGray" Margin="105,10,105,284.714" BorderBrush="MediumPurple" BorderThickness="2.5" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic" ></TextBox>
+        <TextBox Name="textboxA1" IsReadOnly="True" Background="LightGray" Margin="105,83,105,204.714" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
+        <TextBox Name="textboxA2" IsReadOnly="True" Background="LightGray" Margin="105,162,105,125.714" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
+        <TextBox  Name="textboxA3" IsReadOnly="True" Background="LightGray" Margin="105,242,105,45.714" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic"></TextBox>
+        <TextBox  Name="textboxA4" IsReadOnly="True" Background="LightGray" Margin="105,323,105,85" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic" Grid.RowSpan="2"></TextBox>
+        <TextBox  Name="textboxA5" IsReadOnly="True" Background="LightGray" Margin="105,48.286,105,10" BorderBrush="Purple" Foreground="Black" FontSize="20" FontFamily="Lucida Console" FontStyle="Italic" Grid.Row="1"></TextBox>
+        <CheckBox Name="Checkbox1" HorizontalAlignment="Left" Margin="72,109,0,0" VerticalAlignment="Top" Height="17" Width="15" RenderTransformOrigin="0.5,0.5">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <CheckBox Name="Checkbox2" HorizontalAlignment="Left" Margin="72,186,0,0" VerticalAlignment="Top" Height="17" Width="15" RenderTransformOrigin="0.5,0.5">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <CheckBox  Name="Checkbox3" HorizontalAlignment="Left" Margin="72,266,0,0" VerticalAlignment="Top" Height="17" Width="15" RenderTransformOrigin="0.5,0.5">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <CheckBox Name="Checkbox4" HorizontalAlignment="Left" Margin="72,345,0,0" VerticalAlignment="Top" Height="17" Width="15" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <CheckBox Name="Checkbox5" HorizontalAlignment="Left" Margin="72,69.286,0,0" VerticalAlignment="Top" Height="17" Width="15" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="2" ScaleY="2"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <Button Name="Buttonfinish" Background="Red" BorderThickness="2" BorderBrush="Purple" Foreground="DarkBlue" FontSize="11" Margin="10,10,717,312" FontWeight="Bold" Click="Buttonfinish_Click">Завершити</Button>
+
+        <Button Name="buttonexit" FontSize="16" Background="Pink" BorderBrush="Black" Margin="758,1,0,313.714" FontWeight="Bold" FontStyle="Normal" Click="buttonexit_Click" >X</Button>
+
+        <Button Name="ButtonReply" Background="Green" BorderThickness="2" BorderBrush="Purple" Foreground="DarkBlue" FontSize="16" Margin="700,0,10,89" FontWeight="Bold" Click="ButtonSave_Click" Grid.Row="1">Відповісти</Button>
+        <Button BorderBrush="Black" BorderThickness="3" Background="Green" Name="buttonleft"   Margin="0,62,738,31" Grid.Row="1" RenderTransformOrigin="-2.854,-0.124" Click="buttonleft_Click"></Button>
+        <Button BorderBrush="Black" BorderThickness="3" Background="Green" Name="buttonright"  Click="Buttonright_Click" Margin="728,62,10,31" Grid.Row="1"></Button>
+    </Grid>
+</Window>

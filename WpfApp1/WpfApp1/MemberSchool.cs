@@ -12,7 +12,7 @@ namespace WpfApp1
    public class MemberSchool
     {
         [Key]
-        public int Id { get; set; }
+        public int Id { get; set; }//*/
         [Required]
         public string Log { get; set; }
         [Required]

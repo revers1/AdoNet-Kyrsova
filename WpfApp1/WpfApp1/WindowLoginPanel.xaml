@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApp1.WindowLoginPanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="WindowLoginPanel" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="photo.png"  Stretch="UniformToFill" Opacity="0.5"></ImageBrush>
+        </Grid.Background>
+        <Button Name="buttonenter" BorderBrush="Purple" Background="Green" Margin="327,299,327,81" FontWeight="Bold" FontSize="16" Click="buttonenter_Click">Вход</Button>
+        <Label FontSize="16" FontWeight="Bold" Margin="0,0,729,369">Test</Label>
+        <TextBox Name="textboxlogin1" Background="LightGray" Margin="258,107,258,275" BorderBrush="Purple" Foreground="Black" FontSize="16" FontFamily="Lucida Console" FontStyle="Italic" GotFocus="textboxlogin1_GotFocus" LostFocus="textboxlogin1_LostFocus">Логін</TextBox>
+        <TextBox Name="textboxpassword1"  Background="LightGray" Margin="258,204,258,178" BorderBrush="Purple" Foreground="Black" FontFamily="Lucida Console" FontStyle="Italic" FontSize="16" GotFocus="textboxpassword1_GotFocus" LostFocus="textboxpassword1_LostFocus">Пароль</TextBox>
+
+
+    </Grid>
+</Window>
